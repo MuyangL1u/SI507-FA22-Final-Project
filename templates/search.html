@@ -1,0 +1,15 @@
+<h2>These are top 3 results based on your search!</h2>
+<body>
+  <ul>
+      <table style="width: auto">
+          {% for game in info %}
+            <tr><th>{{game[0]}}</th></tr>
+            <tr><th><img src={{game[1]}} /></th></tr>
+            <tr><th>review summary: {{game[2]}}</th></tr>
+            <tr><th>discount: {{game[3]}}</th></tr>
+            <tr><th>steam link: <a href={{game[6]}}>Click this</a></th></tr>
+            <tr><th>------------------------------------------------------------------</th></tr>
+          {% endfor %}
+      </table>
+  </ul>
+</body>

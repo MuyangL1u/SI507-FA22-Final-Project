@@ -1,0 +1,17 @@
+<h2>These are free games offered by Epic this week!</h2>
+<body>
+  <ul>
+      <table style="width: auto">
+          {% for game in info %}
+            <tr><th>{{game[0]}}</th></tr>
+            <tr><th><img src={{game[2]}} width="200" height="200"/></th></tr>
+            <tr><th>{{game[1]}}</th></tr>
+            <tr><th>------------------------------------------------------------------</th></tr>
+          {% endfor %}
+      </table>
+  </ul>
+
+  <p>Click the link below to claim!</p>
+  <table><tr><th><a href="https://store.epicgames.com/en-US/free-games">Click this</th></tr></table>
+
+</body>

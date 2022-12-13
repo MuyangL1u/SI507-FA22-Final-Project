@@ -1,0 +1,20 @@
+<h2>We've selected three popular games for you to review!</h2>
+<body>
+  <form action="/games_details/more" method="GET">
+  <ul>
+      <table style="width: auto">
+          {% for game in info %}
+            <tr><th>{{game[0]}}</th></tr>
+            <tr><th><img src={{game[1]}} /></th></tr>
+            <tr><th>review summary: {{game[2]}}</th></tr>
+            <tr><th>discount: {{game[3]}}</th></tr>
+            <tr><th>original price: {{game[4]}}</th></tr>
+            <tr><th>current price: {{game[5]}}</th></tr>
+            <tr><th>steam link: <a href={{game[6]}}>Click this</a></th></tr>
+            <tr><th>------------------------------------------------------------------</th></tr>
+          {% endfor %}
+      </table>
+  </ul>
+  <table><tr><th><input type="submit" value="Loads more"/></th></tr></table>
+  </form>
+</body>

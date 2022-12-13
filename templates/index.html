@@ -1,0 +1,45 @@
+<head>
+<h2>Hello!</h2>
+  <p style="font-size: 1em;">
+      The program can provide you with sales and reviews information about the popular games on Steam.
+  </p>
+  <p style="font-size: 1em;">
+    You can choose to browse the game recommendations according to your preferences or directly search for your favorite games
+  </p>
+  <p style="font-size: 1em;">
+      And Don't forget to check out weekly free games on Epic.
+      <img src="https://html5-editor.net/tinymce/plugins/emoticons/img/smiley-cool.gif" alt="cool" />
+  </p>
+</head>
+-----------------------------------------------------------------
+<body>
+  <form action="/games_details" method="POST">
+    <p>
+      I want to be recommended with games that are reviewed as
+      <select name='reviews'>
+          <option value="o">at least "Overwhelmingly Positive"</option>
+          <option value="v">at least "Very Positive"</option>
+          <option value="m">at least "Mostly Positive"</option>
+      </select>
+    </p>
+    <p>
+      and I want to be recommended with games that have discounts of
+      <select name='discount'>
+          <option value="A">at least -66%</option>
+          <option value="B">at least -33%</option>
+          <option value="C">Don't care</option>
+      </select>
+    </p>
+    <input type="submit" value="Go"/>
+  </form>
+-----------------------------------------------------------------
+  <form action="/search_games" method="POST">
+    <p>Search for Steam games here:</p>
+    <input name="term" type="text" />
+  </form>
+-----------------------------------------------------------------
+  <form action="/epic_weekly_free_games" method="POST">
+    <p>Click the button below to check out Epic free games this week!</p>
+    <input type="submit" value="Free Games"/>
+  </form>
+</body>
